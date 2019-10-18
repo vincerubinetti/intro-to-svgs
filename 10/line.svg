@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+    }
+  </style>
+  <line x1="20" y1="70" x2="80" y2="30" stroke="#03a9f4" stroke-width="2" />
+  <circle cx="20" cy="70" r="3" fill="#03a9f4" />
+  <circle cx="80" cy="30" r="3" fill="#03a9f4" />
+  <text x="20" y="85" text-anchor="middle">x1,y1</text>
+  <text x="80" y="22" text-anchor="middle">x2,y2</text>
+</svg>

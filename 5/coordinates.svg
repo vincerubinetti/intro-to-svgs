@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 300 300">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  </style>
+  <path
+    fill="#f0f0f0"
+    transform="translate(-38,-35) scale(1.5)"
+    d="
+      M 95.249997,49.99256 C 74.794275,49.932628 91.897973,65.375545 78.619048,82.215028 67.15028,96.758985 56.038703,121.41591 78.052082,125.39881 95.420466,128.54128 95.075635,114.70636 104.32143,108.86235 112.00797,104.0039 122.2921,112.37887 137.20536,97.806546 152.93973,82.431888 130.27184,75.027479 117.92857,68.04092 103.75173,60.016517 107.02525,49.815598 95.249997,49.99256 Z
+    "
+  />
+  <text x="123" y="102" text-anchor="middle" fill="#c0c0c0">content</text>
+  <line x1="0" y1="-1000" x2="0" y2="1000" stroke="#c0c0c0" stroke-width="3" />
+  <line x1="-1000" y1="0" x2="1000" y2="0" stroke="#c0c0c0" stroke-width="3" />
+  <circle cx="0" cy="0" r="5" fill="#03a9f4" />
+  <text x="5" y="240" fill="#c0c0c0">+</text>
+  <text x="230" y="15" fill="#c0c0c0">+</text>
+  <text x="5" y="5" dominant-baseline="hanging">0,0</text>
+  <text x="125" y="200" text-anchor="middle" fill="#c0c0c0">
+    SVG coordinate space
+  </text>
+</svg>

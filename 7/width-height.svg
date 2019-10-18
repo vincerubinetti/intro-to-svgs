@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="45 35 150 125">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  </style>
+  <defs>
+    <clipPath id="clip">
+      <rect x="70" y="60" width="100" height="75" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <path
+      fill="#f0f0f0"
+      transform="translate(-38,-35) scale(1.5)"
+      d="
+        M 95.249997,49.99256 C 74.794275,49.932628 91.897973,65.375545 78.619048,82.215028 67.15028,96.758985 56.038703,121.41591 78.052082,125.39881 95.420466,128.54128 95.075635,114.70636 104.32143,108.86235 112.00797,104.0039 122.2921,112.37887 137.20536,97.806546 152.93973,82.431888 130.27184,75.027479 117.92857,68.04092 103.75173,60.016517 107.02525,49.815598 95.249997,49.99256 Z
+      "
+    />
+  </g>
+  <text x="123" y="102" text-anchor="middle" fill="#c0c0c0">content</text>
+  <rect
+    x="70"
+    y="60"
+    width="100"
+    height="75"
+    fill="none"
+    stroke="#81d4fa"
+    stroke-width="3"
+  />
+  <text x="120" y="155" text-anchor="middle">4 in</text>
+  <text text-anchor="middle" transform="translate(190,100) rotate(-90)">
+    3 in
+  </text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <line
+    x1="10"
+    y1="25"
+    x2="90"
+    y2="25"
+    stroke="#03a9f4"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-dasharray="0 15"
+  />
+  <line
+    x1="10"
+    y1="50"
+    x2="90"
+    y2="50"
+    stroke="#03a9f4"
+    stroke-width="10"
+    stroke-linecap="round"
+    stroke-dasharray="0 15 10 15"
+  />
+  <line
+    x1="10"
+    y1="75"
+    x2="90"
+    y2="75"
+    stroke="#03a9f4"
+    stroke-width="10"
+    stroke-linecap="square"
+    stroke-dasharray="0 15 10 15"
+  />
+</svg>

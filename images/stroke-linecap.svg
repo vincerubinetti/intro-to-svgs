@@ -1,18 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <style>
-    text {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 8px;
-    }
-  </style>
   <line
     stroke="#81d4fa"
     stroke-width="15"
     x1="20"
-    y1="10"
+    y1="20"
     x2="80"
-    y2="10"
+    y2="20"
     stroke-linecap="butt"
   />
   <line
@@ -23,20 +16,19 @@
     stroke-dashoffset="1.414213562"
     stroke-linecap="round"
     x1="20"
-    y1="10"
+    y1="20"
     x2="80"
-    y2="10"
+    y2="20"
   />
-  <circle cx="20" cy="10" r="3" fill="#03a9f4" />
-  <circle cx="80" cy="10" r="3" fill="#03a9f4" />
-  <text text-anchor="middle" x="50" y="25">butt</text>
+  <circle cx="20" cy="20" r="3" fill="#03a9f4" />
+  <circle cx="80" cy="20" r="3" fill="#03a9f4" />
   <line
     stroke="#81d4fa"
     stroke-width="15"
     x1="20"
-    y1="45"
+    y1="50"
     x2="80"
-    y2="45"
+    y2="50"
     stroke-linecap="square"
   />
   <line
@@ -47,13 +39,12 @@
     stroke-dashoffset="1.414213562"
     stroke-linecap="round"
     x1="20"
-    y1="45"
+    y1="50"
     x2="80"
-    y2="45"
+    y2="50"
   />
-  <circle cx="20" cy="45" r="3" fill="#03a9f4" />
-  <circle cx="80" cy="45" r="3" fill="#03a9f4" />
-  <text text-anchor="middle" x="50" y="60">square</text>
+  <circle cx="20" cy="50" r="3" fill="#03a9f4" />
+  <circle cx="80" cy="50" r="3" fill="#03a9f4" />
   <line
     stroke="#81d4fa"
     stroke-width="15"
@@ -77,5 +68,4 @@
   />
   <circle cx="20" cy="80" r="3" fill="#03a9f4" />
   <circle cx="80" cy="80" r="3" fill="#03a9f4" />
-  <text text-anchor="middle" x="50" y="95">round</text>
 </svg>

@@ -5,6 +5,9 @@
       font-weight: 600;
       font-size: 18px;
     }
+    .dimension {
+      font-size: 12px;
+    }
   </style>
   <defs>
     <clipPath id="clip">
@@ -30,8 +33,12 @@
     stroke="#81d4fa"
     stroke-width="3"
   />
-  <text x="120" y="155" text-anchor="middle">4 in</text>
-  <text text-anchor="middle" transform="translate(190,100) rotate(-90)">
+  <text class="dimension" x="120" y="149" text-anchor="middle">4 in</text>
+  <text
+    class="dimension"
+    text-anchor="middle"
+    transform="translate(184,100) rotate(-90)"
+  >
     3 in
   </text>
 </svg>

@@ -3,7 +3,7 @@
     text {
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 12px;
+      font-size: 10px;
     }
   </style>
   <rect
@@ -15,7 +15,7 @@
     stroke="#03a9f4"
     stroke-width="2"
   />
-  <text x="14" y="22">1</text>
+  <text x="15" y="22">1</text>
   <rect
     x="25"
     y="25"
@@ -25,7 +25,7 @@
     stroke="#03a9f4"
     stroke-width="2"
   />
-  <text x="29" y="37">2</text>
+  <text x="30" y="37">2</text>
   <rect
     x="40"
     y="40"
@@ -35,5 +35,5 @@
     stroke="#03a9f4"
     stroke-width="2"
   />
-  <text x="44" y="52">3</text>
+  <text x="45" y="52">3</text>
 </svg>

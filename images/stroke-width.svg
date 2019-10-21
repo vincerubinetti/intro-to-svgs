@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
+  <path
+    fill="none"
+    stroke="#81d4fa"
+    stroke-width="20"
+    d="
+      M 15 95
+      C 25 55 55 25 95 15
+    "
+  />
+  <path
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+    stroke-dasharray="2 4"
+    stroke-dashoffset="1.414213562"
+    stroke-linecap="round"
+    d="
+      M 15 95
+      C 25 55 55 25 95 15
+    "
+  />
+  <circle cx="95" cy="15" r="3" fill="#03a9f4" />
+  <circle cx="15" cy="95" r="3" fill="#03a9f4" />
+  <line
+    x1="36.7"
+    y1="36.7"
+    x2="50.8"
+    y2="50.8"
+    stroke="#000000"
+    stroke-width="2"
+  />
+  <text>
+    <tspan x="50" y="60">stroke</tspan>
+    <tspan x="55" y="60" dy="1em">width</tspan>
+  </text>
+</svg>

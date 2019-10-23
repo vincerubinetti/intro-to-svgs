@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
   <path
     fill="none"
     stroke="#e91e63"
@@ -69,4 +76,7 @@
       Z
     "
   />
+  <text x="68" y="73">
+    x,y
+  </text>
 </svg>

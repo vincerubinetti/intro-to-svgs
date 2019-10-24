@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path
+    fill="none"
+    stroke="#3f51b5"
+    stroke-width="3"
+    d="
+      M 27 30
+      Q 32 15 37 30
+      z
+      M 63 30
+      L 73 30
+      z
+      M 50 42
+      C 50 49 43 50 43 57
+      L 50 57
+      M 45 75
+      A 25 25 0 0 0 60 70
+      A 8 8 0 1 1 45 75
+      z
+    "
+  />
+</svg>

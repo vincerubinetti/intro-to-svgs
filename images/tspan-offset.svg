@@ -26,7 +26,7 @@
     dominant-baseline="middle"
   >
     grumpy
-    <tspan fill="#e91e63" dx="-33" dy="18">
+    <tspan fill="#e91e63" dx="-15" dy="15">
       cat
     </tspan>
   </text>

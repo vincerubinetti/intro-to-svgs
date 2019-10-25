@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
+  <polyline
+    points="30 30 50 50 80 20"
+    fill="none"
+    stroke="#81d4fa"
+    stroke-width="2"
+  />
+  <polyline
+    points="70 50 50 50 70 70"
+    fill="none"
+    stroke="#81d4fa"
+    stroke-width="2"
+  />
+  <path
+    fill="none"
+    stroke="#81d4fa"
+    stroke-width="2"
+    d="
+      M 60 50
+      A 5 5 0 0 1 57 57
+    "
+  />
+  <path
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+    d="
+      M 30 30
+      A 14.142135624 21.213203436 45 0 1 70 70
+    "
+  />
+  <path
+    fill="none"
+    stroke="#81d4fa"
+    stroke-width="2"
+    d="
+      M 30 30
+      A 14.142135624 21.213203436 45 0 0 70 70
+    "
+  />
+  <circle cx="30" cy="30" r="3" fill="#03a9f4" />
+  <circle cx="70" cy="70" r="3" fill="#03a9f4" />
+  <text transform="translate(39,36) rotate(45)">
+    rx
+  </text>
+  <text transform="translate(60,35) rotate(-45)">
+    ry
+  </text>
+  <text x="62" y="59">
+    θ
+  </text>
+</svg>

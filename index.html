@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+      @import url('https://fonts.googleapis.com/css?family=Lato');
+
+      * {
+        --line: 1px;
+        --xxs: 5px;
+        --xs: 10px;
+        --sm: 20px;
+        --md: 40px;
+        --lg: 100px;
+        --xl: 200px;
+        --xxl: 800px;
+
+        --white: #ffffff;
+        --light-gray: #e0e0e0;
+        --black: #000000;
+        --pink: #e91e63;
+
+        --serif: 'EB Garamond', serif;
+        --sans: 'Lato', sans-serif;
+
+        font-family: var(--serif);
+        line-height: 1.5em;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex-grow: 1;
+      }
+      header,
+      footer {
+        background: var(--pink);
+        color: var(--white);
+        text-align: center;
+      }
+      header {
+        padding: var(--lg) var(--sm);
+      }
+      footer {
+        padding: var(--md) var(--sm);
+      }
+      footer,
+      footer * {
+        font-family: var(--sans);
+      }
+      header a,
+      footer a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: var(--sm) 0;
+        color: var(--white);
+      }
+      footer a > *:not(:first-child) {
+        margin-left: var(--xxs);
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--xxl);
+      }
+      main > section {
+        margin: var(--md) auto;
+        padding: 0 var(--sm);
+      }
+      hr {
+        background: var(--light-gray);
+        background-clip: content-box;
+        border: none;
+        height: var(--line);
+        margin: 0 auto;
+        padding: 0 var(--sm);
+        max-width: var(--xxl);
+      }
+      h1 {
+        font-size: 3em;
+        font-weight: normal;
+        text-align: center;
+        flex-basis: 100%;
+        margin: 0;
+        word-break: break-word;
+      }
+      h2 {
+        font-size: 2em;
+        font-weight: normal;
+        text-align: center;
+        font-style: italic;
+        flex-basis: 100%;
+        margin: 0;
+        word-break: break-word;
+      }
+      h3 {
+        font-size: 1.65em;
+        font-weight: bold;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0.5em 0;
+      }
+      h4 {
+        font-size: 1.25em;
+        font-weight: bold;
+        flex-basis: 100%;
+        margin: 0.5em 0;
+      }
+      a {
+        color: var(--pink);
+      }
+      p,
+      ul,
+      ol {
+        flex-basis: 100%;
+        margin: 0;
+        margin-bottom: 0.75em;
+      }
+      .col {
+        margin: var(--xs) var(--sm);
+      }
+      .vr {
+        border-radius: 100%;
+      }
+      figure {
+        display: inline-block;
+        width: var(--xl);
+        height: var(--xl);
+      }
+      figure > img {
+        width: 100%;
+        height: 100%;
+      }
+      figure > figcaption {
+        width: 100%;
+        margin-top: var(--xs);
+        text-align: center;
+        font-style: italic;
+      }
+      @media screen and (min-width: 800px) {
+      }
+      @media screen and (max-width: 800px) {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1>Introduction to SVGs</h1>
+        <h2>(for academic folk)</h2>
+      </section>
+    </header>
+    <main>
+      <section id="author">
+        <div class="col">
+          <a href="https://www.vincentrubinetti.com">
+            <img src="images/vr.jpg" class="vr" height="150px" />
+          </a>
+        </div>
+        <div class="col">
+          <h4>
+            by
+            <a href="https://www.vincentrubinetti.com">
+              Vincent Rubinetti
+            </a>
+          </h4>
+          <p>
+            Frontend Developer, UX/UI Designer<br />
+            <br />
+            <i>Created October 25, 2019</i><br />
+            <i>Updated November 4, 2019</i>
+          </p>
+        </div>
+      </section>
+
+      <section id="intro">
+        <p>
+          This is an introduction on SVGs (scalable vector graphics). It is
+          aimed at people in academia and and how they might most commonly use
+          the format (for figures, papers, presentations, posters, etc).
+        </p>
+        <p>
+          This training should teach you:
+        </p>
+        <ul>
+          <li>The basic building blocks of the SVG format</li>
+          <li>How to make basic SVGs by hand</li>
+          <li>
+            How to more confidently edit SVGs made by software or third parties
+          </li>
+          <li>
+            When it is appropriate to make an SVG by hand and when it is not
+          </li>
+          <li>
+            General familiarity with the format such that you can more
+            effectively Google a particular problem
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Background</h3>
+        <h4>Raster vs Vector</h4>
+        <p>
+          What are vector images, and how do they differ from regular images?
+        </p>
+        <p>
+          In short: A vector graphic is made up of primitive shapes, whereas a
+          "normal" image (also called a "raster" graphic) is made up of a grid
+          of pixels.
+        </p>
+        <figure>
+          <img src="images/1-background/raster-explained.svg" />
+          <figcaption>Raster image</figcaption>
+        </figure>
+        <figure>
+          <img src="images/1-background/vector-explained.svg" />
+          <figcaption>Vector image</figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer>
+      <section>
+        <a href="https://creativecommons.org/licenses/by/4.0/" class="col">
+          <span>Licensed under</span>
+          <img src="images/cc.svg" class="cc_icon" height="20px" />
+          <img src="images/by.svg" class="cc_icon" height="20px" />
+          <span>CC BY 4.0</span>
+        </a>
+        <a href="https://www.greenelab.com/" class="col">
+          <img src="images/greene-lab.svg" class="greene_lab" height="50px" />
+          <span>A project of the Greene Lab</span>
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>

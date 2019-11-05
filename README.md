@@ -6,6 +6,7 @@
 - `/exercise-hints` - boilerplate (starting-point) SVGs for the exercises
 - `/images` - all images in the tutorial, most of which were written as SVGs (checkout their source code to see more examples of SVGs in action)
 - `styles.css` - visual styles for the webpage
+- `scripts.js` - interactive stuff for the webpage
 - Jekyll stuff (for generating the webpage)
   * `/_sections` - sections of the tutorial as separate markdown files
   * `index.md` - compiles/concatenates all the section content into one

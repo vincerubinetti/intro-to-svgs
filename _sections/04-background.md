@@ -34,6 +34,17 @@ Answer: <span class="spoiler">Fonts. Most fonts are vector based so text can be 
 Because vector graphics are drawn with primitive shapes, they are better suited to simpler, less detailed, more "geometric" images that can be drawn using basic shapes.
 More "photographic" images, such as realistic depictions of people, animals, etc, are usually better captured by raster images.
 
-{% include figure.html src="1-background/vector-example-1.png" caption="Simple vector image" %}
-{% include figure.html src="1-background/vector-example-2.png" caption="Complex vector image" %}
-{% include figure.html src="1-background/raster-example.png" caption="Raster image" %}
+{% include figure.html src="1-background/vector-example-1.svg" caption="Simple vector image" class="medium_img" %}
+{% include figure.html src="1-background/vector-example-2.svg" caption="Complex vector image" class="medium_img" %}
+{% include figure.html src="1-background/raster-example.png" caption="Raster image" class="medium_img" %}
+
+#### What is SVG
+
+SVG is the most popular general-purpose vector graphic format.
+It was developed by the W3C, the organization in charge of defining web standards like HTML and CSS.
+
+{% include figure.html src="1-background/svg-logo.svg" caption="SVG logo" %}
+{% include figure.html src="1-background/w3c-logo.svg" caption="W3C logo" %}
+
+SVG was originally aimed at the web, but it became so popular that you can now see it in a lot of other contexts too, like Word documents, PDFs, graphs, illustrations, graphic design, printed media, etc.
+Keep this in mind when using SVGs outside of a browser: the context you're using it in might not support all of the advanced features that a browser does, because it has essentially co-opted the technology from another platform.

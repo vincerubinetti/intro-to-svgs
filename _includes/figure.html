@@ -1,4 +1,10 @@
 <figure>
-  <img src="images/{{ include.src }}" alt="{{ include.caption }}" />
+  <a href="">
+    <img
+      src="images/{{ include.src }}"
+      alt="{{ include.caption }}"
+      class="{{ include.class }}"
+    />
+  </a>
   <figcaption>{{ include.caption }}</figcaption>
 </figure>

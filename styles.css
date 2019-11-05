@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+@import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500');
 
 * {
   --line: 1px;
@@ -9,21 +10,31 @@
   --md: 40px;
   --lg: 100px;
   --xl: 150px;
-  --xxl: 800px;
+  --xxl: 200px;
+  --xxxl: 300px;
+  --huge: 800px;
 
   --white: #ffffff;
   --light-gray: #e0e0e0;
+  --gray: #a0a0a0;
+  --dark-gray: #202020;
   --black: #000000;
-  --pink: #e91e63;
+  --red: #e91e63;
+  --pink: #f06292;
+  --purple: #ce93d8;
+  --green: #dce775;
+  --light-blue: #64b5f6;
 
-  --serif: 'EB Garamond', serif;
+  --serif: 'Lora', serif;
   --sans: 'Lato', sans-serif;
+  --mono: 'Source Code Pro', sans-serif;
 
   --fast: 0.25s ease;
 
   font-family: var(--serif);
   line-height: 1.5em;
 }
+
 html,
 body {
   margin: 0;
@@ -39,7 +50,7 @@ main {
 }
 header,
 footer {
-  background: var(--pink);
+  background: var(--red);
   color: var(--white);
   text-align: center;
 }
@@ -59,7 +70,7 @@ footer a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: var(--sm) 0;
+  margin: var(--xs) 0;
   color: var(--white);
 }
 section {
@@ -69,20 +80,11 @@ section {
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--xxl);
+  max-width: var(--huge);
 }
 main > section {
   margin: var(--md) auto;
   padding: 0 var(--sm);
-}
-hr {
-  background: var(--light-gray);
-  background-clip: content-box;
-  border: none;
-  height: var(--line);
-  margin: 0 auto;
-  padding: 0 var(--sm);
-  max-width: var(--xxl);
 }
 h1 {
   font-size: 3em;
@@ -90,7 +92,6 @@ h1 {
   text-align: center;
   flex-basis: 100%;
   margin: 0;
-  word-break: break-word;
 }
 h2 {
   font-size: 2em;
@@ -99,40 +100,121 @@ h2 {
   font-style: italic;
   flex-basis: 100%;
   margin: 0;
-  word-break: break-word;
 }
 h3 {
-  font-size: 1.65em;
+  font-size: 2em;
   font-weight: bold;
   flex-basis: 100%;
   text-align: center;
-  margin: 1em 0 0.5em 0;
+  margin: 0;
+  margin-top: var(--md);
   padding-bottom: var(--xs);
-  border-bottom: solid var(--line) var(--light-gray);
+  border-bottom: solid var(--line) var(--gray);
 }
 h4 {
   font-size: 1.25em;
   font-weight: bold;
   flex-basis: 100%;
-  margin: 1em 0 0.5em 0;
+  margin: 0;
+  margin-top: var(--md);
 }
 a {
-  color: var(--pink);
+  color: var(--red);
 }
 p,
 ul,
 ol {
   flex-basis: 100%;
-  margin: 0.5em 0;
+  margin: var(--xs) 0;
+}
+ul,
+ol {
+  padding-left: var(--md);
+}
+figure {
+  display: inline-block;
+}
+img {
+  width: var(--xxl);
+  height: var(--xxl);
+}
+figure figcaption {
+  width: 100%;
+  margin-top: var(--xs);
+  text-align: center;
+  font-style: italic;
+}
+div.highlighter-rouge {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  margin: var(--xs) 0;
+  padding: var(--xs) var(--sm);
+  background: var(--dark-gray);
+  overflow-x: auto;
+}
+div.highlighter-rouge * {
+  font-family: var(--mono);
+  font-weight: 500;
+}
+pre {
+  margin: 0;
+}
+.table_container {
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  margin: var(--xs) 0;
+}
+th,
+td {
+  padding: var(--xs) var(--sm);
+  border: solid var(--line) var(--light-gray);
+}
+.highlight {
+  color: var(--white);
+}
+.nt {
+  color: var(--pink);
+}
+.na {
+  color: var(--purple);
+}
+.s {
+  color: var(--green);
+}
+.c {
+  color: var(--gray);
+}
+*:not(pre) > code {
+  font-family: var(--mono);
+  font-weight: 500;
+  padding: 0 2px;
+  background: var(--light-gray);
 }
 .col {
-  margin: var(--xs) var(--sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  min-width: var(--xxl);
+}
+.medium_img {
+  width: var(--xl);
+  height: var(--xl);
+}
+.unset_img {
+  width: unset;
+  height: unset;
+  max-width: 100%;
 }
 .vr {
-  height: var(--xl);
   border-radius: 100%;
 }
 .cc_icon {
+  width: var(--sm);
   height: var(--sm);
   margin-right: var(--xxs);
 }
@@ -140,20 +222,8 @@ ol {
   margin-left: var(--xxs);
 }
 .greene_lab {
+  width: var(--md);
   height: var(--md);
-}
-figure {
-  display: inline-block;
-}
-figure > img {
-  width: var(--xl);
-  height: var(--xl);
-}
-figure > figcaption {
-  width: 100%;
-  margin-top: var(--xs);
-  text-align: center;
-  font-style: italic;
 }
 .spoiler {
   background: var(--black);
@@ -165,4 +235,7 @@ figure > figcaption {
 @media screen and (min-width: 800px) {
 }
 @media screen and (max-width: 800px) {
+  .col {
+    flex-basis: 100%;
+  }
 }

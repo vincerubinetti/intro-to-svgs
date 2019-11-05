@@ -6,3 +6,6 @@
     stroke="#9c27b0"
   />
 </svg>
+<!-- NOTE: using whole number dashes/gaps wont line up evenly if your radius
+  is also a whole number, because the circumference of the circle will be 
+  irrational (because of pi). that's okay. -->

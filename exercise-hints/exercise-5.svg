@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -50 100 100">
+  <!-- HINT: draw one petal, once, then copy the d to all of the path elements
+    in the document -->
   <g fill="#f48fb1">
     <path d="" transform="rotate(0)" />
-    <!-- copy above path d -->
     <path d="" transform="rotate(36)" />
     <path d="" transform="rotate(72)" />
     <path d="" transform="rotate(108)" />
@@ -13,16 +14,6 @@
     <path d="" transform="rotate(324)" />
   </g>
   <g fill="#f48fb1">
-    <!-- copy above group contents -->
-    <path d="" transform="rotate(0)" />
-    <path d="" transform="rotate(36)" />
-    <path d="" transform="rotate(72)" />
-    <path d="" transform="rotate(108)" />
-    <path d="" transform="rotate(144)" />
-    <path d="" transform="rotate(180)" />
-    <path d="" transform="rotate(216)" />
-    <path d="" transform="rotate(252)" />
-    <path d="" transform="rotate(288)" />
-    <path d="" transform="rotate(324)" />
+    <!-- copy above group contents when it is finished-->
   </g>
 </svg>

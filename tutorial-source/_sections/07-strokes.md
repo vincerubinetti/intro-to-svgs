@@ -91,6 +91,9 @@ The attribute is specified as a series of alternating dash and gap lengths, star
 If you only provide one value, the dash and gap values will be the same.
 In reality, when an odd number of values is provided, the sequence is duplicated once to yield an even number; but this results in unintuitive behavior, and is not recommended for best clarity.
 
+Note: The units of the dash and gap lengths are the same as any other unit in SVG.
+They are absolute distances, not percentages or any other relative measurement.
+
 
 
 #### Dotted lines

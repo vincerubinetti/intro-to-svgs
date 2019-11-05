@@ -23,7 +23,8 @@
   --pink: #f06292;
   --purple: #ce93d8;
   --green: #dce775;
-  --light-blue: #64b5f6;
+  --orange: #f78c6c;
+  --blue: #82aaff;
 
   --serif: 'Lora', serif;
   --sans: 'Lato', sans-serif;
@@ -179,11 +180,24 @@ td {
 .nt {
   color: var(--pink);
 }
-.na {
+.na,
+.py,
+.nl {
   color: var(--purple);
 }
-.s {
+.s,
+.n,
+.no,
+.m {
   color: var(--green);
+}
+.nf,
+.nc {
+  color: var(--orange);
+}
+.k,
+.sx {
+  color: var(--blue);
 }
 .c {
   color: var(--gray);
@@ -201,6 +215,13 @@ td {
   flex-wrap: wrap;
   flex-basis: 50%;
   min-width: var(--xxl);
+  max-height: var(--xxxl);
+  overflow-y: auto;
+}
+@media screen and (max-width: 800px) {
+  .col {
+    flex-basis: 100%;
+  }
 }
 .large_img {
   width: var(--xxxl);
@@ -231,11 +252,4 @@ td {
 }
 .spoiler:hover {
   background: none;
-}
-@media screen and (min-width: 800px) {
-}
-@media screen and (max-width: 800px) {
-  .col {
-    flex-basis: 100%;
-  }
 }

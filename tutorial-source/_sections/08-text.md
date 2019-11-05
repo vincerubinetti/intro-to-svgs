@@ -50,7 +50,7 @@ There are many properties available for styling text, but here are the most usef
 {% include code-image.html src="5-text/text-style.svg" %}
 
 If the specified font family isn't installed, a system default will be used. 
-Special note: it is possible to specify an order of fallback fonts, including a generic type (eg serif, sans-serif, monospace).
+Special note: It is possible to specify an order of fallback fonts, including a generic type (eg serif, sans-serif, monospace).
 You most likely won't need to use this, but keep it in mind.
 
 The `font-weight` attribute can be set to `normal` (default), `bold`, `bolder`, `lighter`, or a multiple of 100 between 100 and 1000 (400 is normal, 700 is bold).

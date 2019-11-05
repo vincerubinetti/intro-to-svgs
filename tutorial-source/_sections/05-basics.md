@@ -167,7 +167,7 @@ Because of this pipeline, specifying real world units is prone to error.
 You might not produce the actual size you intend.
 
 
-**Bottom line**: write SVGs without units, except for the `width` and `height` attributes on the `<svg>` element itself.
+**Bottom line**: Write SVGs without units, except for the `width` and `height` attributes on the `<svg>` element itself.
 It is standard practice; and most SVG editing software seems to generate SVGs in this manner by default.
 It is also in line with the main purpose of SVGs, which is to create images that are independent of actual size.
 
@@ -215,7 +215,7 @@ You will likely have to override this frequently.
 By default, the stroke is shown in front of the fill.
 Unfortunately, there isn't a reliable, fully accepted way (for all browsers and software) to switch this order.
 
-Special note: you may also come across the value `currentColor`.
+Special note: You may also come across the value `currentColor`.
 This makes the fill or stroke match the "active" color in whatever is viewing the SVG.
 This is really only relevant in web development, where, for example, you may want an SVG icon to automatically match the color of the text it is inline with.
 If there is no "current color" to use, it will default to black.

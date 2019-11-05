@@ -5,7 +5,7 @@
       font-family: 'Pacifico';
     }
     #company {
-      font-size: 14pt;
+      font-size: 20pt;
     }
     .blue {
       fill: #03a9f4;
@@ -24,7 +24,7 @@
   >
     Twiddr
   </text>
-  <circle cx="-15" cy="15" r="3" class="blue dot" />
-  <circle cx="0" cy="15" r="3" class="blue dot" />
-  <circle cx="15" cy="15" r="3" class="blue dot" />
+  <circle cx="-15" cy="20" r="4" class="blue dot" />
+  <circle cx="0" cy="20" r="4" class="blue dot" />
+  <circle cx="15" cy="20" r="4" class="blue dot" />
 </svg>

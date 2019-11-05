@@ -66,7 +66,7 @@ That is, all strokes, fill patterns, child shapes, etc will be warped.
 
 {% include code-image.html src="7-groups-transforms/transform.svg" %}
 
-The attribute takes a series of functions that are **applied right to left**.
+The attribute takes a series of functions that are **applied right to left**, separated by space.
 Multiple functions of the same type can be specified, and in any order.
 Arguments can be separated by space or comma.
 

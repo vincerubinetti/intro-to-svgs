@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .coordinates {
+      font-size: 8px;
+    }
+  </style>
+  <line x1="15" y1="22" x2="15" y2="38" stroke="#c0c0c0" />
+  <line x1="15" y1="30" x2="25" y2="30" stroke="#c0c0c0" />
+  <circle cx="15" cy="30" r="2" fill="#03a9f4" />
+  <text fill="#03a9f4" dominant-baseline="baseline" x="16.5" y="27">
+    baseline
+  </text>
+  <line x1="15" y1="43" x2="15" y2="59" stroke="#c0c0c0" />
+  <line x1="15" y1="51" x2="25" y2="51" stroke="#c0c0c0" />
+  <circle cx="15" cy="51" r="2" fill="#03a9f4" />
+  <text fill="#03a9f4" dominant-baseline="middle" x="16.5" y="51">
+    middle
+  </text>
+  <line x1="15" y1="64" x2="15" y2="78" stroke="#c0c0c0" />
+  <line x1="15" y1="70" x2="25" y2="70" stroke="#c0c0c0" />
+  <circle cx="15" cy="70" r="2" fill="#03a9f4" />
+  <text fill="#03a9f4" dominant-baseline="hanging" x="16.5" y="73">
+    hanging
+  </text>
+</svg>

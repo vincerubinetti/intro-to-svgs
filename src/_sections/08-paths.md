@@ -8,7 +8,7 @@
 #### The `<path>` element
 
 
-`<path>` elements can be used to create arbitrary shapes that behave like any of the standard shapes (with regard to fill, stroke, opacity, etc).
+A `<path>` element can be used to create arbitrary shapes that behave like any of the standard shapes (with regard to `fill`, `stroke`, `opacity`, etc).
 The geometry of a path is specified in its `d` (data/description/definition) attribute.
 
 ```xml
@@ -22,13 +22,15 @@ The geometry of a path is specified in its `d` (data/description/definition) att
 
 {% include code-image.html src="6-paths/path.svg" %}
 
+[<i class="fas fa-lg fa-external-link-alt"></i>Paths overview](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)
+
 
 
 #### The `d` attribute
 
 The `d` attribute takes a **sequence of draw commands**.
 You can think of these commands as moving a paint brush around a canvas.
-Commands go _from_ the current point -- wherever the "brush" ended up from the preceding commands -- _to_ the specified point.
+Commands go _from_ the current point -- wherever the "brush" ended up from the previous commands -- _to_ the specified point.
 
 Each command is a single letter, and can be followed by numerical values to specify where and how to draw the command.
 
@@ -48,7 +50,7 @@ Letters next to numerical values do not need to be separated at all, because the
 Line breaks are also permitted.
 
 There are many different ways to format path strings.
-However, for best clarity, this author recommends separating commands by line, and separating command values by space
+However, for best clarity, it is recommended to separate commands by line, and separate command values by space.
 
 
 
@@ -119,11 +121,11 @@ A 50 50 0 0 1 65 75
 
 {% include code-image.html src="6-paths/path-a-1.svg" %}
 
-You might expect that arcs would work by specifying the center point and start and end angles.
+You might expect that arcs would work by specifying the center point and start/end angles.
 Instead, it works from start point to end point, and you choose 1 of 4 possible arcs between them.
 This unfortunately means that if the start/end angles you want to draw aren't multiples of 90 degrees, you'll have to do some trigonometry to calculate coordinates, and you'll end up with a lot of non-whole numbers.
 
-The final `x`,`y` inputs are the end point coordinate.
+The final `x`/`y` inputs are the end point coordinate.
 
 {% include figure.html src="6-paths/path-a-2.svg" caption="Arc angle" %}
 
@@ -131,7 +133,7 @@ The `rx` and `ry` inputs specify the x and y radii of the ellipse that forms the
 
 The angle input determines the _direction the `rx` and `ry` radii_.
 **It does not change the start/end points of the arc**.
-The angle specifies the clockwise degrees between the global positive x axis and the positive x axis of the ellipse.
+The angle specifies the clockwise degrees between the `viewBox` positive x axis and the positive x axis of the ellipse.
 
 If `rx` and `ry` are the same, the angle will have no visible effect, because a perfect circle looks the same when rotated.
 
@@ -139,7 +141,7 @@ If `rx` and `ry` are the same, the angle will have no visible effect, because a 
 
 Given a certain radius, there are 4 possible arcs that can be drawn between two points.
 The `large` and `cw` (often called the "large arc" and "sweep" flags) inputs allow you to specify which of the 4 possible arcs should be used.
-These inputs should be set to 0 (for false) or 1 (for true).
+These inputs should be set to `0` (for false) or `1` (for true).
 
 When `large` is set to `1`, the outer/larger arc is used (shown as dotted lines above).
 When `large` is set to `0`, the inner/smaller arc is used (shown as solid lines above).
@@ -152,8 +154,7 @@ If you have to turn left the whole time, the `cw` flag is `0`.
 
 If the radii you've specified aren't large enough to create an arc to the specified point, they are increased (maintaining proportions) until they are.
 
-[Paths reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths)  
-[Interactive demonstration of the arc command](https://codepen.io/lingtalfi/pen/yaLWJG)
+[<i class="fas fa-lg fa-external-link-alt"></i>Interactive demonstration of the arc command](https://codepen.io/lingtalfi/pen/yaLWJG)
 
 
 
@@ -170,10 +171,10 @@ C a b c d x y
 
 {% include code-image.html src="6-paths/path-c.svg" %}
 
-Tip: To connect two curved segments smoothly without any visible joint, make sure that the slopes/angles of the two connecting control point tangent lines are the same.
+<i class="fas fa-lg fa-info-circle"></i>Tip: To connect two curved segments smoothly without any visible joint, make sure that their connecting handle lines are the same slope.
 
-[Wikipedia article on Bezier Curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Constructing_B%C3%A9zier_curves)  
-[Interactive demonstration of Bezier curves](https://www.joshwcomeau.com/posts/dynamic-bezier-curves/)
+[<i class="fas fa-lg fa-external-link-alt"></i>Wikipedia article on Bezier Curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Constructing_B%C3%A9zier_curves)  
+[<i class="fas fa-lg fa-external-link-alt"></i>Interactive demonstration of Bezier curves](https://www.joshwcomeau.com/posts/dynamic-bezier-curves/)
 
 
 
@@ -189,9 +190,9 @@ S c d x y
 
 {% include code-image.html src="6-paths/path-s.svg" %}
 
-This command should only be used right after a `Q` command or another `S` command.
+This command should only be used right after a `Q` command or another `S` command; otherwise there is no previous control point to assume from.
 
-This is how curve pen tools in programs like Inkscape and Illustrator typically work, where you click and drag to define the first control point of the next curve and the second control point of the previous curve at the same time.
+This is how the curve/pen tool in programs like Inkscape and Illustrator typically works, where you click and drag to simultaneously define the first control point of the next curve and the second control point of the previous curve.
 
 
 
@@ -221,13 +222,13 @@ T x y
 
 {% include code-image.html src="6-paths/path-t.svg" %}
 
-This command should only be used right after a `Q` command or another `T` command.
+This command should only be used right after a `Q` command or another `T` command; otherwise there is no previous control point to assume from.
 
 
 
 #### Relative coordinates
 
-Note that all of the previous commands were shown as capital letters.
+Note that all of the previous commands were shown as **capital letters**.
 If you provide a lowercase command letter, coordinates you give it are assumed to be relative to the previous coordinate, instead of relative to the origin of the image (absolute).
 
 ```xml
@@ -273,11 +274,10 @@ z
 
 
 
-#### EXERCISE 4
+#### <i class="fas fa-lg fa-flag-checkered"></i>  EXERCISE 4
 {:.break_before}
 
-{% include figure.html src="exercises/exercise-4.svg" class="large_img" caption="" %}
+{% include figure.html src="exercises/exercise-4.svg" class="large_img" %}
 
-Recreate this SVG on your own using the techniques covered so far.
+Recreate this SVG using the techniques covered so far.
 The exact colors, lengths, and dimensions are not important; just try to capture the basic picture.
-Use the SVGs in the `exercise-hints` folder as a starting point if you get stuck.

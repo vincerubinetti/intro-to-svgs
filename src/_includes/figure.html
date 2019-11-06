@@ -1,8 +1,8 @@
 <figure>
-  <a href="">
+  <a href="images/{{ include.src }}" target="_blank">
     <img
       src="images/{{ include.src }}"
-      alt="{{ include.caption }}"
+      alt="{% if include.caption %}{{ include.caption }}{% else %}{{ include.src }}{% endif %}"
       class="{{ include.class }}"
     />
   </a>

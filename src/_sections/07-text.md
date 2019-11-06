@@ -5,13 +5,13 @@
 
 
 
-#### Text element
+#### The `<text>` element
 
 Unfortunately, text is one of the most painful things to deal with in SVG.
 It will display inconsistently on different platforms and software, especially with regard to alignment.
-To guarantee it will always look as expected, convert text to raw shapes using SVG software (eg Inkscape's "Object to path" functionality).
 
-For posterity, it is a good idea to either leave in the original `<text>` element commented out, or just make a comment noting the font/size/style you used to generate the text.
+To guarantee it will always look as expected, convert text to raw shapes using SVG software (eg Inkscape's "Object to path" functionality).
+When you do this, it is a good idea to either leave in the original `<text>` element commented out, or just make a comment noting the font/size/style you used to generate the text, for posterity.
 
 ```xml
 <text
@@ -25,7 +25,7 @@ For posterity, it is a good idea to either leave in the original `<text>` elemen
 
 {% include code-image.html src="5-text/text.svg" %}
 
-Text is written by specifying an `x`,`y` coordinate on a `<text>` element, and enclosing the actual text to be displayed within the element.
+Text is written by specifying an `x`/`y` coordinate on a `<text>` element, and enclosing the actual text to be displayed within the element.
 
 
 
@@ -49,11 +49,12 @@ There are many properties available for styling text, but here are the most usef
 
 {% include code-image.html src="5-text/text-style.svg" %}
 
-If the specified font family isn't installed, a system default will be used.
-Special note: It is possible to specify an order of fallback fonts, including a generic type (eg serif, sans-serif, monospace).
-You most likely won't need to use this, but keep it in mind.
-
 The `font-weight` attribute can be set to `normal` (default), `bold`, `bolder`, `lighter`, or a multiple of 100 between 100 and 1000 (400 is normal, 700 is bold).
+
+If the specified font family isn't installed, a system default will be used.
+
+<i class="fas fa-lg fa-sticky-note"></i>Special note: It is possible to specify an order of fallback fonts, including a generic type (eg `serif`, `sans-serif`, `monospace`).
+You most likely won't need to use this, but keep it in mind.
 
 
 
@@ -144,9 +145,9 @@ You will have to manually break text at the desired places and position lines be
 
 #### Whitespace
 
-As we mentioned before, SVG (and most of the related web standards) are whitespace-insensitive.
+As mentioned before, SVG (and most of the related web standards) are whitespace-insensitive.
 Multiple consecutive whitespace characters are collapsed down to one.
-This can unfortunately cause tricky problems with text spacing in SVGs.
+This can unfortunately cause some tricky problems with text, because the way you format your code sometimes matters.
 
 ```xml
 grumpy<tspan>cat</tspan>
@@ -163,15 +164,14 @@ grumpy
 Keep this quirk in mind when writing text in SVG.
 If you are having alignment/spacing problems, check your whitespace.
 
-Whitespace can be forced by using Unicode characters in your text content (eg `&#160` for a single space).
+If you explicitly need multiple consecutive whitespace characters in your text, you can force them with Unicode characters (eg `&#160` for a single space).
 
 
 
-#### EXERCISE 3
+#### <i class="fas fa-lg fa-flag-checkered"></i>  EXERCISE 3
 {:.break_before}
 
-{% include figure.html src="exercises/exercise-3.svg" class="large_img" caption="" %}
+{% include figure.html src="exercises/exercise-3.svg" class="large_img" %}
 
-Recreate this SVG on your own using the techniques covered so far.
+Recreate this SVG using the techniques covered so far.
 The exact colors, lengths, and dimensions are not important; just try to capture the basic picture.
-Use the SVGs in the `exercise-hints` folder as a starting point if you get stuck.

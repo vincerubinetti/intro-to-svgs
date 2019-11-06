@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500');
+@import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');
 
 * {
   --line: 1px;
@@ -21,10 +22,14 @@
   --black: #000000;
   --red: #e91e63;
   --pink: #f06292;
-  --purple: #ce93d8;
-  --green: #dce775;
-  --orange: #f78c6c;
-  --blue: #82aaff;
+  --light-pink: #ffd9e5;
+  --light-purple: #ce93d8;
+  --light-green: #dce775;
+  --light-orange: #f78c6c;
+  --light-blue: #82aaff;
+  --blue: #2196f3;
+  --purple: #9c27b0;
+  --green: #4caf50;
 
   --serif: 'Lora', serif;
   --sans: 'Lato', sans-serif;
@@ -49,23 +54,14 @@ footer {
   text-align: center;
 }
 header {
-  padding: var(--lg) var(--sm);
+  padding: var(--lg) 0;
 }
 footer {
-  padding: var(--md) var(--sm);
+  padding: var(--md) 0;
 }
 footer,
 footer * {
   font-family: var(--sans);
-}
-header a,
-footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: var(--xs) 0;
-  color: var(--white);
 }
 section {
   margin: var(--md) auto;
@@ -92,8 +88,8 @@ h3 {
   text-align: center;
   margin: var(--lg) 0 var(--xs) 0;
   padding: var(--xs) 0;
-  border-top: solid var(--line) var(--gray);
-  border-bottom: solid var(--line) var(--gray);
+  border-top: solid var(--line) var(--light-gray);
+  border-bottom: solid var(--line) var(--light-gray);
 }
 h4 {
   font-size: 1.25em;
@@ -102,8 +98,38 @@ h4 {
   margin: 0;
   margin-top: var(--md);
 }
+summary {
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  margin-top: var(--md);
+  margin-bottom: var(--sm);
+  cursor: pointer;
+}
 a {
   color: var(--red);
+  text-decoration: none;
+  transition: color var(--fast);
+}
+a:hover,
+a:focus {
+  color: var(--black);
+}
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: var(--xs) 0;
+  color: var(--white);
+}
+footer a img {
+  transition: filter var(--fast);
+}
+footer a:hover img,
+footer a:focus img {
+  filter: brightness(0);
 }
 p,
 ul,
@@ -135,8 +161,7 @@ figure figcaption {
 div.highlighter-rouge {
   box-sizing: border-box;
   display: inline-block;
-  margin: var(--xs) 0;
-  padding: var(--xs) var(--sm);
+  padding: var(--xs);
   background: var(--dark-gray);
   overflow-x: auto;
 }
@@ -149,6 +174,11 @@ div.highlighter-rouge:not(.col) {
 }
 pre {
   margin: 0;
+}
+i.fas {
+  display: inline;
+  margin: 0;
+  margin-right: var(--xs);
 }
 .table_container {
   margin: var(--xs) 0;
@@ -173,24 +203,42 @@ td {
 .na,
 .py,
 .nl {
-  color: var(--purple);
+  color: var(--light-purple);
 }
 .s,
 .n,
 .no,
 .m {
-  color: var(--green);
+  color: var(--light-green);
 }
 .nf,
 .nc {
-  color: var(--orange);
+  color: var(--light-orange);
 }
 .k,
 .sx {
-  color: var(--blue);
+  color: var(--light-blue);
 }
 .c {
   color: var(--gray);
+}
+.fa-info-circle {
+  color: var(--blue);
+}
+.fa-question-circle {
+  color: var(--red);
+}
+.fa-exclamation-circle {
+  color: var(--blue);
+}
+.fa-exclamation-triangle {
+  color: var(--red);
+}
+.fa-check-circle {
+  color: var(--green);
+}
+.fa-sticky-note {
+  color: var(--purple);
 }
 *:not(pre) > code {
   font-family: var(--mono);
@@ -205,9 +253,6 @@ td {
   flex-wrap: wrap;
   width: calc(50% - 7px);
   vertical-align: middle;
-}
-.col > p {
-  width: 100%;
 }
 @media screen and (max-width: 800px) {
   .col {
@@ -244,6 +289,59 @@ td {
 .spoiler:hover {
   background: none;
 }
+#toc {
+}
+#toc > a {
+  display: block;
+  text-align: left;
+  margin: var(--xxs) 0;
+}
+#toc > a[data-level='2'] {
+  margin-left: var(--md);
+}
+#jump_to_toc {
+  position: fixed;
+  right: var(--sm);
+  bottom: var(--sm);
+  font-family: var(--sans);
+  font-weight: bold;
+  transition: color var(--fast), opacity var(--fast);
+}
+#jump_to_toc[data-visible='false'] {
+  opacity: 0;
+}
+.anchor {
+  margin-left: var(--xs);
+  opacity: 0;
+  transition: color var(--fast), opacity var(--fast);
+}
+h3:hover .anchor,
+h4:hover .anchor,
+.anchor:focus {
+  opacity: 1;
+}
+.anchor i {
+  margin: 0;
+}
+@media (hover: none) {
+  .anchor {
+    opacity: 1;
+  }
+}
+[data-glow='true'] {
+  animation: highlight_glow 2s;
+}
+@keyframes highlight_glow {
+  0% {
+    background: none;
+  }
+  10% {
+    background: var(--light-pink);
+  }
+  100% {
+    background: none;
+  }
+}
 
 @media print {
   header {
@@ -251,6 +349,10 @@ td {
   }
   footer {
     break-before: page;
+  }
+  section {
+    margin: 0;
+    padding: 0;
   }
   h3 {
     margin-top: 0;
@@ -270,5 +372,11 @@ td {
   }
   .break_after {
     break-after: page;
+  }
+  #toc {
+    display: none;
+  }
+  #jump_to_toc {
+    display: none;
   }
 }

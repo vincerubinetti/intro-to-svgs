@@ -58,6 +58,9 @@ footer {
 }
 header {
   padding: var(--lg) 0;
+  background-image: url('images/header.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 footer {
   padding: var(--md) 0;

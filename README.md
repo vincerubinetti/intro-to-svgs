@@ -1,1 +1,1 @@
-## The basics of SVGs, for academics
+## The basics of SVGs, for people in academia

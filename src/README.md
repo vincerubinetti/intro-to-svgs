@@ -11,3 +11,4 @@
 - `/_includes` - convenient, reusable HTML code snippets
 - `_config.yml`, `Gemfile`, `Gemfile.lock` - Jekyll configuration
 - `_site` - output when site gets built
+- **anything else** - likely a favicon/icon-related file

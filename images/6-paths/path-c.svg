@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
+  <line x1="25" y1="25" x2="25" y2="60" stroke="#81d4fa" stroke-width="2" />
+  <line x1="75" y1="75" x2="75" y2="40" stroke="#81d4fa" stroke-width="2" />
+  <path
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+    d="
+      M 25 25
+      C 25 60 75 40 75 75
+    "
+  />
+  <circle cx="25" cy="25" r="3" fill="#03a9f4" />
+  <circle cx="75" cy="75" r="3" fill="#03a9f4" />
+  <circle cx="25" cy="60" r="3" fill="#03a9f4" />
+  <circle cx="75" cy="40" r="3" fill="#03a9f4" />
+  <text x="25" y="69.5" text-anchor="middle">
+    a,b
+  </text>
+  <text x="75" y="35" text-anchor="middle">
+    c,d
+  </text>
+  <text x="75" y="84" text-anchor="middle">
+    x,y
+  </text>
+</svg>

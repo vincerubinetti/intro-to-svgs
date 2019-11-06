@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
+  <path
+    fill="none"
+    stroke="#e91e63"
+    stroke-width="2"
+    d="
+      M 35 35
+      A 30 30 0 0 0 65 65
+    "
+  />
+  <path
+    fill="none"
+    stroke="#e91e63"
+    stroke-width="2"
+    stroke-dasharray="2"
+    d="
+      M 35 35
+      A 30 30 0 1 0 65 65
+    "
+  />
+  <path
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+    d="
+      M 35 35
+      A 30 30 0 0 1 65 65
+    "
+  />
+  <path
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+    stroke-dasharray="2"
+    d="
+      M 35 35
+      A 30 30 0 1 1 65 65
+    "
+  />
+  <circle cx="35" cy="35" r="3" fill="#03a9f4" />
+  <circle cx="65" cy="65" r="3" fill="#03a9f4" />
+  <path
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+    opacity="0.5"
+    d="
+      M 65 30
+      A 5 5 0 1 1 70 35
+      M 70 35
+      L 70 33.5
+      L 68 35
+      L 70 36.5
+      Z
+    "
+  />
+  <path
+    fill="none"
+    stroke="#e91e63"
+    stroke-width="2"
+    opacity="0.5"
+    d="
+      M 30 65
+      A 5 5 0 1 0 35 70
+      M 35 70
+      L 33.5 70
+      L 35 68
+      L 36.5 70
+      Z
+    "
+  />
+  <text x="68" y="73">
+    x,y
+  </text>
+</svg>

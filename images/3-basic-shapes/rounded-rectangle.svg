@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
+  <rect
+    x="10"
+    y="25"
+    width="75"
+    height="50"
+    rx="15"
+    ry="15"
+    fill="#81d4fa"
+    stroke="#03a9f4"
+    stroke-width="2"
+  />
+  <polyline
+    points="10 40 25 40 25 25"
+    x1="25"
+    y1="40"
+    x2="10"
+    y2="40"
+    fill="none"
+    stroke="#03a9f4"
+    stroke-width="2"
+  />
+  <text x="14" y="47">rx</text>
+  <text transform="translate(32,37) rotate(-90)">ry</text>
+</svg>

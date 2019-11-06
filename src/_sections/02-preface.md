@@ -1,6 +1,19 @@
 ---
 ---
 
+<div class="col">
+  <a href="https://www.vincentrubinetti.com">
+    <img src="images/vr.jpg" class="vr">
+  </a>
+</div>
+
+<div class="col" markdown="1">
+  **by [Vincent Rubinetti](https://www.vincentrubinetti.com)**  
+  Frontend Developer, UX/UI Designer  
+  _Created October 25, 2019_  
+  _Updated November 6, 2019_
+</div>
+
 This is an introduction to the SVG -- scalable vector graphics -- image format.
 It is aimed at people in academia and and how they might most commonly use the format (for figures, papers, presentations, posters, etc).
 

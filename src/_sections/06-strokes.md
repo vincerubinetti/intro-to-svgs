@@ -132,6 +132,7 @@ The `stroke-dashoffset` attribute shifts the dash pattern toward the end point (
 
 
 #### EXERCISE 2
+{:.break_before}
 
 {% include figure.html src="exercises/exercise-2.svg" class="large_img" caption="" %}
 

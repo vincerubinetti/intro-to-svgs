@@ -148,6 +148,7 @@ This also often makes the coordinates more symmetric, making them easier to read
 
 
 #### EXERCISE 5
+{:.break_before}
 
 {% include figure.html src="exercises/exercise-5.svg" class="large_img" caption="" %}
 

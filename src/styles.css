@@ -42,13 +42,6 @@ body {
   padding: 0;
   height: 100%;
 }
-body {
-  display: flex;
-  flex-direction: column;
-}
-main {
-  flex-grow: 1;
-}
 header,
 footer {
   background: var(--red);
@@ -75,23 +68,15 @@ footer a {
   color: var(--white);
 }
 section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--huge);
-}
-main > section {
   margin: var(--md) auto;
   padding: 0 var(--sm);
+  max-width: var(--huge);
+  text-align: center;
 }
 h1 {
   font-size: 3em;
   font-weight: normal;
   text-align: center;
-  flex-basis: 100%;
   margin: 0;
 }
 h2 {
@@ -99,13 +84,11 @@ h2 {
   font-weight: normal;
   text-align: center;
   font-style: italic;
-  flex-basis: 100%;
   margin: 0;
 }
 h3 {
   font-size: 2em;
   font-weight: bold;
-  flex-basis: 100%;
   text-align: center;
   margin: var(--lg) 0 var(--xs) 0;
   padding: var(--xs) 0;
@@ -115,7 +98,7 @@ h3 {
 h4 {
   font-size: 1.25em;
   font-weight: bold;
-  flex-basis: 100%;
+  text-align: left;
   margin: 0;
   margin-top: var(--md);
 }
@@ -124,9 +107,11 @@ a {
 }
 p,
 ul,
-ol {
-  flex-basis: 100%;
-  margin: var(--xs) 0;
+ol,
+div.highlighter-rouge {
+  margin-top: var(--sm);
+  margin-bottom: var(--sm);
+  text-align: left;
 }
 ul,
 ol {
@@ -135,6 +120,7 @@ ol {
 figure {
   display: inline-block;
   text-align: center;
+  vertical-align: top;
 }
 img {
   width: var(--xxl);
@@ -149,7 +135,6 @@ figure figcaption {
 div.highlighter-rouge {
   box-sizing: border-box;
   display: inline-block;
-  width: 100%;
   margin: var(--xs) 0;
   padding: var(--xs) var(--sm);
   background: var(--dark-gray);
@@ -159,15 +144,20 @@ div.highlighter-rouge * {
   font-family: var(--mono);
   font-weight: 500;
 }
+div.highlighter-rouge:not(.col) {
+  width: 100%;
+}
 pre {
   margin: 0;
 }
 .table_container {
+  margin: var(--xs) 0;
+  width: 100%;
   overflow-x: auto;
 }
 table {
   border-collapse: collapse;
-  margin: var(--xs) 0;
+  margin: 0 auto;
 }
 th,
 td {
@@ -209,18 +199,19 @@ td {
   background: var(--light-gray);
 }
 .col {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-basis: 50%;
-  min-width: var(--xxl);
-  max-height: var(--xxxl);
-  overflow-y: auto;
+  width: calc(50% - 7px);
+  vertical-align: middle;
+}
+.col > p {
+  width: 100%;
 }
 @media screen and (max-width: 800px) {
   .col {
-    flex-basis: 100%;
+    width: 100%;
   }
 }
 .large_img {
@@ -252,4 +243,32 @@ td {
 }
 .spoiler:hover {
   background: none;
+}
+
+@media print {
+  header {
+    break-after: page;
+  }
+  footer {
+    break-before: page;
+  }
+  h3 {
+    margin-top: 0;
+    break-before: page;
+  }
+  code {
+    white-space: pre-wrap;
+  }
+  div.highlighter-rouge {
+    overflow-x: visible;
+  }
+  .table_container {
+    overflow-x: visible;
+  }
+  .break_before {
+    break-before: page;
+  }
+  .break_after {
+    break-after: page;
+  }
 }

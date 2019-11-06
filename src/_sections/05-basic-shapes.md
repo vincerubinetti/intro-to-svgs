@@ -117,7 +117,8 @@ Note that if a fill is specified for an open shape, it will still be filled and 
 
 
 
-#### EXERCISE 1
+#### EXERCISE 1 
+{:.break_before}
 
 {% include figure.html src="exercises/exercise-1.svg" class="large_img" caption="" %}
 

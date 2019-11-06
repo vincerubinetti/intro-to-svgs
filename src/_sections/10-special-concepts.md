@@ -280,6 +280,7 @@ This may change in future versions of SVG.
 
 
 #### EXERCISE 6
+{:.break_before}
 
 {% include figure.html src="exercises/exercise-6.svg" class="large_img" caption="" %}
 

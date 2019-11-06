@@ -137,7 +137,7 @@ If `rx` and `ry` are the same, the angle will have no visible effect, because a 
 
 {% include figure.html src="6-paths/path-a-3.svg" caption="Arc flags" %}
 
-Given a certain radius, there are 4 possible arcs that can be drawn between two points. 
+Given a certain radius, there are 4 possible arcs that can be drawn between two points.
 The `large` and `cw` (often called the "large arc" and "sweep" flags) inputs allow you to specify which of the 4 possible arcs should be used.
 These inputs should be set to 0 (for false) or 1 (for true).
 
@@ -274,6 +274,7 @@ z
 
 
 #### EXERCISE 4
+{:.break_before}
 
 {% include figure.html src="exercises/exercise-4.svg" class="large_img" caption="" %}
 

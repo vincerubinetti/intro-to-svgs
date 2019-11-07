@@ -1,7 +1,7 @@
 // make table of contents list of links from headings with ids
 function makeToc() {
   const headings = document.querySelectorAll('h3[id], h4[id]');
-  const toc = document.querySelector('#toc');
+  const toc = document.querySelector('.toc');
 
   let count = 1;
   for (const heading of headings) {
@@ -25,8 +25,8 @@ function makeToc() {
 
 // make fixed "jump to table of contents" button
 function makeJumpToToc() {
-  const toc = document.querySelector('#toc');
-  const jump = document.querySelector('#jump_to_toc');
+  const toc = document.querySelector('.toc');
+  const jump = document.querySelector('.jump_to_toc');
 
   jump.addEventListener('click', () => {
     if (!toc.getAttribute('open')) toc.setAttribute('open', '');

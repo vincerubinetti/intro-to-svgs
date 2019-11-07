@@ -11,7 +11,7 @@
   **by [Vincent Rubinetti](https://www.vincentrubinetti.com)**  
   Frontend Developer, UX/UI Designer  
   _Created October 25, 2019_  
-  _Updated November 6, 2019_
+  _Updated November 6, 2019_  
 </div>
 
 This is an introduction to the [**S**calable **V**ector **G**raphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) image format.
@@ -26,7 +26,7 @@ This tutorial should teach you:
 - When it is appropriate to make an SVG by hand and when it is not
 - General familiarity with the format such that you can more effectively Google a particular problem
 
-<details id="toc">
+<details id="toc" class="toc">
   <summary>
     Table of contents
   </summary>

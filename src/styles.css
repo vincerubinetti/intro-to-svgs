@@ -331,8 +331,11 @@ td {
   text-align: left;
   margin: var(--xxs) 0;
 }
-.toc > a[data-level='2'] {
+.toc > a[data-level='1'] {
   margin-left: var(--md);
+}
+.toc > a[data-level='2'] {
+  margin-left: calc(var(--md) * 2);
 }
 .jump_to_toc {
   position: fixed;

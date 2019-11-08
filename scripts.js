@@ -45,6 +45,7 @@ function onScroll() {
     jump.dataset.visible = 'true';
   else jump.dataset.visible = 'false';
 }
+window.addEventListener('scroll', onScroll);
 
 // make section anchors on headings with ids
 function makeAnchors() {

@@ -1,0 +1,160 @@
+I"�%<h3 id="groups-and-transforms">Groups and Transforms</h3>
+
+<h4 id="the-g-element">The <code class="highlighter-rouge">&lt;g&gt;</code> element</h4>
+
+<p>Elements can be grouped together and then treated and operated on as a whole, just like in any software that has grouping.
+Placing elements inside a <code class="highlighter-rouge">&lt;g&gt;</code> element groups them together.
+Groups can be nested within each other, allowing for a complex hierarchy of visual components.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"skyblue"</span> <span class="na">stroke=</span><span class="s">"blue"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;polygon</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/g&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/group.svg" target="_blank">
+    <img src="images/7-groups-transforms/group.svg" alt="7-groups-transforms/group.svg" />
+  </a>
+</div>
+
+<p>Style attributes like <code class="highlighter-rouge">fill</code> and <code class="highlighter-rouge">stroke</code> can be set once, on the group element, and will automatically cascade down to all of the children elements.
+Transformations can be applied to a group to affect all of the children as if they were a single cohesive element.</p>
+
+<p>SVG editing software usually uses groups as a way to make layers that can be conveniently toggled on/off.
+Groups may also be used to just divide the document into more readable/manageable sections.</p>
+
+<h4 id="group-opacity">Group opacity</h4>
+
+<p>When the <code class="highlighter-rouge">opacity</code> attribute is applied to a group, all of its children are drawn as normal before the opacity is applied.
+If you draw several overlapping shapes with solid fills and put them in a group with an opacity, they will become translucent together as a single shape, rather than being individually translucent.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;rect</span> <span class="na">opacity=</span><span class="s">"0.5"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;circle</span> <span class="na">opacity=</span><span class="s">"0.5"</span> <span class="nt">/&gt;</span>
+
+<span class="nt">&lt;g</span> <span class="na">opacity=</span><span class="s">"0.5"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="nt">/&gt;&lt;circle</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/g&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/group-opacity.svg" target="_blank">
+    <img src="images/7-groups-transforms/group-opacity.svg" alt="7-groups-transforms/group-opacity.svg" />
+  </a>
+</div>
+
+<p>This is a useful trick when the shape you need is more easily drawn with basic shapes than with a multi-part <code class="highlighter-rouge">&lt;path&gt;</code> element, and you need it to be transparent.</p>
+
+<h4 id="the-transform-attribute">The <code class="highlighter-rouge">transform</code> attribute</h4>
+
+<p>The <code class="highlighter-rouge">transform</code> attribute can be applied to an element to translate, scale, rotate, or skew it.
+The transformations are applied near the end of the rendering process, meaning that they will transform the element “as is”.
+That is, all strokes, fill patterns, child shapes, etc will be warped.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">transform=</span><span class="s">"last() middle() first()"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/transform.svg" target="_blank">
+    <img src="images/7-groups-transforms/transform.svg" alt="7-groups-transforms/transform.svg" />
+  </a>
+</div>
+
+<p>The attribute takes a series of functions that are <strong>applied right to left</strong>, separated by space.
+Multiple functions of the same type can be specified, and in any order.
+Arguments can be separated by space or comma.</p>
+
+<h4 id="translate">Translate</h4>
+
+<p>The <code class="highlighter-rouge">translate</code> function takes <code class="highlighter-rouge">dx</code> and <code class="highlighter-rouge">dy</code> distances (specified the same way as any other unit) to move the object by in the x and y axes.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code>translate(dx,dy)
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/transform-translate.svg" target="_blank">
+    <img src="images/7-groups-transforms/transform-translate.svg" alt="7-groups-transforms/transform-translate.svg" />
+  </a>
+</div>
+
+<h4 id="scale">Scale</h4>
+
+<p>The <code class="highlighter-rouge">scale</code> function takes <code class="highlighter-rouge">sx</code> and <code class="highlighter-rouge">sy</code> factors to scale the object by in the x and y axes.
+<code class="highlighter-rouge">1</code> is original size, <code class="highlighter-rouge">0.5</code> is half size, <code class="highlighter-rouge">2</code> is double size, etc.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scale(sx,sy)
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/transform-scale.svg" target="_blank">
+    <img src="images/7-groups-transforms/transform-scale.svg" alt="7-groups-transforms/transform-scale.svg" />
+  </a>
+</div>
+
+<p>If <code class="highlighter-rouge">sy</code> is not provided, it is assumed to be the same as the provided <code class="highlighter-rouge">sx</code>; ie, an aspect-ratio-preserving scale.</p>
+
+<h4 id="rotate">Rotate</h4>
+
+<p>The <code class="highlighter-rouge">rotate</code> function takes an <code class="highlighter-rouge">angle</code> to rotate the object by (clockwise, from the positive x axis).</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rotate(angle,x,y)
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/transform-rotate.svg" target="_blank">
+    <img src="images/7-groups-transforms/transform-rotate.svg" alt="7-groups-transforms/transform-rotate.svg" />
+  </a>
+</div>
+
+<p>The function also takes an optional <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code> rotation pivot point, which is assumed to be the origin if not provided.</p>
+
+<h4 id="skew">Skew</h4>
+
+<p>The <code class="highlighter-rouge">skewX</code> and <code class="highlighter-rouge">skewY</code> functions take an <code class="highlighter-rouge">angle</code> to horizontally and vertically (respectively) skew the object by.
+Skewing can be thought of as slicing the object (horizontally with skewX or vertically with skewY) and splaying those slices out like a deck of cards.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code>skewX(angle)
+skewY(angle)
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/7-groups-transforms/transform-skew.svg" target="_blank">
+    <img src="images/7-groups-transforms/transform-skew.svg" alt="7-groups-transforms/transform-skew.svg" />
+  </a>
+</div>
+
+<p>The <code class="highlighter-rouge">x</code> skew can also be visualized as rotating the vertical axis (counter-clockwise) by an angle, and the <code class="highlighter-rouge">y</code> skew as rotating the horizontal axis (clockwise).</p>
+
+<h4 id="transform-origin">Transform origin</h4>
+
+<p>By default, transform operations are done <strong>relative to the origin of the SVG</strong>.
+If you wish to transform an element around its center, you unfortunately must go through a tedious process: first translate the object such that its center is at <code class="highlighter-rouge">0,0</code>, apply your rotation/scale/skew, then translate it back to its original position.</p>
+
+<p>There is a <code class="highlighter-rouge">transform-origin</code> attribute that can change which absolute point the element is transformed around, but unfortunately it is not reliable.
+Also, it only allows you to set the transform origin relative to the <code class="highlighter-rouge">viewBox</code> (eg, center of the view), not around the center of a particular element.</p>
+
+<figure>
+  <a href="images/7-groups-transforms/transform-origin.svg" target="_blank">
+    <img src="images/7-groups-transforms/transform-origin.svg" alt="A shape drawn around the origin" class="" />
+  </a>
+  <figcaption>A shape drawn around the origin</figcaption>
+</figure>
+
+<p>As such, sometimes it is a good idea to simply draw shapes around the origin from the start, then translate them to the desired location.
+This has the added benefit of making the coordinates more symmetric, easier to read, and quicker to change later.</p>
+
+<h4 class="break_before" id="--exercise-5"><i class="fas fa-lg fa-flag-checkered"></i>  EXERCISE 5</h4>
+
+<figure>
+  <a href="images/exercises/exercise-5.svg" target="_blank">
+    <img src="images/exercises/exercise-5.svg" alt="exercises/exercise-5.svg" class="large_img" />
+  </a>
+  <figcaption></figcaption>
+</figure>
+
+<p>Recreate this SVG using the techniques covered so far.
+The exact colors, lengths, and dimensions are not important; just try to capture the basic picture.</p>
+:ET

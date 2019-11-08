@@ -1,0 +1,54 @@
+I"8<h3 id="conclusion">Conclusion</h3>
+
+<h4 id="beyond">Beyond</h4>
+
+<p>There are many other advanced capabilities that SVG has to offer; too many to cover in a single tutorial:</p>
+
+<ul>
+  <li>All sorts of metadata – like <code class="highlighter-rouge">&lt;title&gt;</code> and <code class="highlighter-rouge">&lt;desc&gt;</code> – can be embedded that can serve various purposes for users and editing software</li>
+  <li>Custom <code class="highlighter-rouge">&lt;pattern&gt;</code>’s (eg checkerboard) can be defined and used for <code class="highlighter-rouge">fill</code> or <code class="highlighter-rouge">stroke</code></li>
+  <li>Shapes can be cut out of and into other shapes using <code class="highlighter-rouge">&lt;clipPath&gt;</code> and <code class="highlighter-rouge">&lt;mask&gt;</code></li>
+  <li>You can draw holes into single shapes using the special <code class="highlighter-rouge">evenodd</code> fill rule</li>
+  <li>You can write text along arbitrary paths using <code class="highlighter-rouge">&lt;textPath&gt;</code></li>
+  <li>For images with a lot of duplicate objects, you can define an object once and reference it from other places in the image</li>
+  <li>You can create custom filters to produce all sorts of interesting visual effects</li>
+  <li>Presentation attributes can be animated with CSS <code class="highlighter-rouge">@keyframes</code> to make cool animations</li>
+  <li>Various external sources can be embedded into SVGs, including raster images, HTML elements, and even other SVGs</li>
+  <li>…and much more</li>
+</ul>
+
+<figure>
+  <a href="images/9-conclusion/beyond-1.svg" target="_blank">
+    <img src="images/9-conclusion/beyond-1.svg" alt="Pattern" class="" />
+  </a>
+  <figcaption>Pattern</figcaption>
+</figure>
+
+<figure>
+  <a href="images/9-conclusion/beyond-2.svg" target="_blank">
+    <img src="images/9-conclusion/beyond-2.svg" alt="Mask" class="" />
+  </a>
+  <figcaption>Mask</figcaption>
+</figure>
+
+<figure>
+  <a href="images/9-conclusion/greene-lab-animated.svg" target="_blank">
+    <img src="images/9-conclusion/greene-lab-animated.svg" alt="Animation" class="" />
+  </a>
+  <figcaption>Animation</figcaption>
+</figure>
+
+<h4 id="wrap-up">Wrap-up</h4>
+
+<p>SVG is a <a href="https://www.w3.org/TR/SVG/">giant and complex specification</a>.
+What has been covered in this tutorial is hopefully 90% of what you will ever need, but it is still only the tip of the iceberg in terms of the number of features and concepts.</p>
+
+<p>When you Google for help, or when you open a software-generated SVG, you will likely see many things you don’t understand.
+This is okay and normal, even for people who have worked with SVG a lot.</p>
+
+<p>You’ll run into thing that are legacy: old features that have been deprecated but are still included to support really old software.
+Always check to see if it’s something you really need.</p>
+
+<p>And you’ll run into things that are cutting edge: proposed additions to the specification that are very new and not widely supported yet.
+Always test your images on multiple devices/browsers/platforms to make sure they work reliably.</p>
+:ET

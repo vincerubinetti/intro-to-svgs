@@ -1,0 +1,140 @@
+I"M<h3 id="strokes">Strokes</h3>
+
+<h4 id="width">Width</h4>
+
+<p>The <code class="highlighter-rouge">stroke-width</code> attribute specifies the thickness of the stroke around an element.
+Note that the stroke is always applied “on center” with the outline of the element.
+Half of the stroke width will be applied on one side of the outline, and the other half on the other side.
+The outline is exactly where you specify it in the geometry of your shape.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">stroke-width=</span><span class="s">"..."</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/4-strokes/stroke-width.svg" target="_blank">
+    <img src="images/4-strokes/stroke-width.svg" alt="4-strokes/stroke-width.svg" />
+  </a>
+</div>
+
+<p>Unfortunately, there is no reliable way to set the stroke to be on the inside or the outside of the outline.
+You will either have to adjust your geometry points to account for the thickness you want, or use a program like Inkscape or Illustrator to help you achieve the desired effect.</p>
+
+<h4 id="line-cap">Line cap</h4>
+
+<p>The <code class="highlighter-rouge">stroke-linecap</code> attribute specifies how the strokes of unclosed shapes look at their ends.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">stroke-linecap=</span><span class="s">"butt"</span>
+  <span class="na">stroke-linecap=</span><span class="s">"square"</span>
+  <span class="na">stroke-linecap=</span><span class="s">"round"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/4-strokes/stroke-linecap.svg" target="_blank">
+    <img src="images/4-strokes/stroke-linecap.svg" alt="4-strokes/stroke-linecap.svg" />
+  </a>
+</div>
+
+<p><code class="highlighter-rouge">Butt</code> is the default; it specifies that the stroke ends flush with the end of the outline.
+<code class="highlighter-rouge">Square</code> specifies that that stroke extends beyond the end of the outline a distance of half the stroke thickness, creating the appearance of a square centered on the end point.
+<code class="highlighter-rouge">Round</code> is the same as <code class="highlighter-rouge">square</code>, except the the stroke is rounded creating the appearance of a circle centered on the end point.</p>
+
+<h4 id="line-join">Line join</h4>
+
+<p>The <code class="highlighter-rouge">stroke-linejoin</code> attribute specifies how consecutive segments of a stroke are joined.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">stroke-linejoin=</span><span class="s">"miter"</span>
+  <span class="na">stroke-linejoin=</span><span class="s">"bevel"</span>
+  <span class="na">stroke-linejoin=</span><span class="s">"round"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/4-strokes/stroke-linejoin.svg" target="_blank">
+    <img src="images/4-strokes/stroke-linejoin.svg" alt="4-strokes/stroke-linejoin.svg" />
+  </a>
+</div>
+
+<p><code class="highlighter-rouge">Miter</code> is the default; it extends the edges of the stroke until they intersect, and fills the enclosed area.
+<code class="highlighter-rouge">Bevel</code> treats the segments as if they were <code class="highlighter-rouge">butt</code> caps, and fills the resulting gap between them.
+<code class="highlighter-rouge">Round</code> treats the segments as if they were <code class="highlighter-rouge">round</code> caps.</p>
+
+<p>The <code class="highlighter-rouge">stroke-miterlimit</code> attribute can be used to make a <code class="highlighter-rouge">miter</code> join by default, but make a <code class="highlighter-rouge">bevel</code> join where the joint angle is too sharp (to avoid a long point jutting out).</p>
+
+<h4 id="dashed-lines">Dashed lines</h4>
+
+<p>The <code class="highlighter-rouge">stroke-dasharray</code> attribute allows you to create custom dash patterns for strokes.
+The attribute is specified as a series of alternating dash and gap lengths, starting with the first dash length.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">stroke-dasharray=</span><span class="s">"d g d g ..."</span>
+
+  <span class="na">stroke-dasharray=</span><span class="s">"10"</span>
+  <span class="na">stroke-dasharray=</span><span class="s">"20 10"</span>
+  <span class="na">stroke-dasharray=</span><span class="s">"20 10 5 10"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/4-strokes/stroke-dasharray-1.svg" target="_blank">
+    <img src="images/4-strokes/stroke-dasharray-1.svg" alt="4-strokes/stroke-dasharray-1.svg" />
+  </a>
+</div>
+
+<p>If you only provide one value, the dash and gap values will be the same.
+In reality, when an odd number of values is provided, the sequence is duplicated once to yield an even number; but this results in unintuitive behavior, and is not recommended for best clarity.</p>
+
+<p><i class="fas fa-lg fa-info-circle"></i>Note: The units of the dash and gap lengths are the same as any other unit in SVG.
+They are absolute distances, not percents or any other relative measurement.</p>
+
+<h4 id="dotted-lines">Dotted lines</h4>
+
+<p>By setting <code class="highlighter-rouge">stroke-linecap</code> to <code class="highlighter-rouge">round</code> or <code class="highlighter-rouge">square</code> and using 0-length dashes, you can create dotted lines.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">stroke-dasharray=</span><span class="s">"0 15"</span>
+  <span class="na">stroke-dasharray=</span><span class="s">"0 15 10 15"</span>
+  <span class="na">stroke-dasharray=</span><span class="s">"0 15 10 15"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/4-strokes/stroke-dasharray-2.svg" target="_blank">
+    <img src="images/4-strokes/stroke-dasharray-2.svg" alt="4-strokes/stroke-dasharray-2.svg" />
+  </a>
+</div>
+
+<h4 id="dash-offset">Dash offset</h4>
+
+<p>By default, the dash pattern begins at the starting point of the stroke.
+The <code class="highlighter-rouge">stroke-dashoffset</code> attribute shifts the dash pattern toward the end point (negative) or toward the start point (positive).</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;element</span>
+  <span class="na">stroke-dashoffset=</span><span class="s">"0"</span>
+  <span class="na">stroke-dashoffset=</span><span class="s">"-5"</span>
+  <span class="na">stroke-dashoffset=</span><span class="s">"-10"</span>
+<span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/4-strokes/stroke-dasharray-3.svg" target="_blank">
+    <img src="images/4-strokes/stroke-dasharray-3.svg" alt="4-strokes/stroke-dasharray-3.svg" />
+  </a>
+</div>
+
+<h4 class="break_before" id="--exercise-2"><i class="fas fa-lg fa-flag-checkered"></i>  EXERCISE 2</h4>
+
+<figure>
+  <a href="images/exercises/exercise-2.svg" target="_blank">
+    <img src="images/exercises/exercise-2.svg" alt="" class="large_img" />
+  </a>
+  <figcaption></figcaption>
+</figure>
+
+<p>Recreate this SVG using the techniques covered so far.
+The exact colors, lengths, and dimensions are not important; just try to capture the basic picture.</p>
+:ET

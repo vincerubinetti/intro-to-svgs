@@ -1,0 +1,177 @@
+I"�$<h3 id="text">Text</h3>
+
+<h4 id="the-text-element">The <code class="highlighter-rouge">&lt;text&gt;</code> element</h4>
+
+<p>Unfortunately, text is one of the most painful things to deal with in SVG.
+It will display inconsistently on different platforms and software, especially with regard to alignment.</p>
+
+<p>To guarantee it will always look as expected, convert text to raw shapes using SVG software (eg Inkscape’s “Object to path” functionality).
+When you do this, it is a good idea to either leave in the original <code class="highlighter-rouge">&lt;text&gt;</code> element commented out, or just make a comment noting the font/size/style you used to generate the text, for posterity.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text</span>
+  <span class="na">x=</span><span class="s">"..."</span>
+  <span class="na">y=</span><span class="s">"..."</span>
+<span class="nt">&gt;</span>
+  Text
+<span class="nt">&lt;/text&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/text.svg" target="_blank">
+    <img src="images/5-text/text.svg" alt="5-text/text.svg" />
+  </a>
+</div>
+
+<p>Text is written by specifying an <code class="highlighter-rouge">x</code>/<code class="highlighter-rouge">y</code> coordinate on a <code class="highlighter-rouge">&lt;text&gt;</code> element, and enclosing the actual text to be displayed within the element.</p>
+
+<h4 id="styling">Styling</h4>
+
+<p>There are many properties available for styling text, but here are the most useful/common ones.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text</span>
+  <span class="na">font-family=</span><span class="s">"Montserrat"</span>
+  <span class="na">font-size=</span><span class="s">"16"</span>
+  <span class="na">font-weight=</span><span class="s">"bold"</span>
+  <span class="na">font-style=</span><span class="s">"italic"</span>
+  <span class="na">text-decoration=</span><span class="s">"underline"</span>
+  <span class="na">letter-spacing=</span><span class="s">"5"</span>
+<span class="nt">&gt;</span>
+  SPOOKY
+<span class="nt">&lt;/text&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/text-style.svg" target="_blank">
+    <img src="images/5-text/text-style.svg" alt="5-text/text-style.svg" />
+  </a>
+</div>
+
+<p>The <code class="highlighter-rouge">font-weight</code> attribute can be set to <code class="highlighter-rouge">normal</code> (default), <code class="highlighter-rouge">bold</code>, <code class="highlighter-rouge">bolder</code>, <code class="highlighter-rouge">lighter</code>, or a multiple of 100 between 100 and 1000 (400 is normal, 700 is bold).</p>
+
+<p>If the specified font family isn’t installed, a system default will be used.</p>
+
+<p><i class="fas fa-lg fa-sticky-note"></i>Special note: It is possible to specify an order of fallback fonts, including a generic type (eg <code class="highlighter-rouge">serif</code>, <code class="highlighter-rouge">sans-serif</code>, <code class="highlighter-rouge">monospace</code>).
+You most likely won’t need to use this, but keep it in mind.</p>
+
+<h4 id="horizontal-alignment">Horizontal alignment</h4>
+
+<p>The <code class="highlighter-rouge">text-anchor</code> attribute determines how the text is aligned horizontally.
+The default is <code class="highlighter-rouge">start</code>.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text</span>
+  <span class="na">text-anchor=</span><span class="s">"start"</span>
+  <span class="na">text-anchor=</span><span class="s">"middle"</span>
+  <span class="na">text-anchor=</span><span class="s">"end"</span>
+<span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/text-anchor.svg" target="_blank">
+    <img src="images/5-text/text-anchor.svg" alt="5-text/text-anchor.svg" />
+  </a>
+</div>
+
+<h4 id="vertical-alignment">Vertical alignment</h4>
+
+<p>The <code class="highlighter-rouge">dominant-baseline</code> attribute determines how the text is aligned vertically.
+The default is <code class="highlighter-rouge">baseline</code>.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text</span>
+  <span class="na">dominant-baseline=</span><span class="s">"baseline"</span>
+  <span class="na">dominant-baseline=</span><span class="s">"middle"</span>
+  <span class="na">dominant-baseline=</span><span class="s">"hanging"</span>
+<span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/text-baseline.svg" target="_blank">
+    <img src="images/5-text/text-baseline.svg" alt="5-text/text-baseline.svg" />
+  </a>
+</div>
+
+<p>Don’t confuse this with the <code class="highlighter-rouge">alignment-baseline</code> attribute, which is similar but not quite the same.</p>
+
+<h4 id="the-tspan-element">The <code class="highlighter-rouge">&lt;tspan&gt;</code> element</h4>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text&gt;</span>
+  grumpy
+  <span class="nt">&lt;tspan</span> <span class="na">fill=</span><span class="s">"#e91e63"</span><span class="nt">&gt;</span>
+    cat
+  <span class="nt">&lt;/tspan&gt;</span>
+<span class="nt">&lt;/text&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/tspan.svg" target="_blank">
+    <img src="images/5-text/tspan.svg" alt="5-text/tspan.svg" />
+  </a>
+</div>
+
+<p><code class="highlighter-rouge">&lt;tspan&gt;</code> elements can be placed inside <code class="highlighter-rouge">&lt;text&gt;</code> elements to style individual words/strings without breaking the normal flow of text.</p>
+
+<h4 id="tspan-offset"><code class="highlighter-rouge">&lt;tspan&gt;</code> offset</h4>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;text</span>
+  <span class="na">baseline-shift=</span><span class="s">"super"</span>
+  <span class="na">baseline-shift=</span><span class="s">"sub"</span>
+
+  <span class="na">dx=</span><span class="s">"..."</span>
+  <span class="na">dy=</span><span class="s">"..."</span>
+<span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/tspan-offset.svg" target="_blank">
+    <img src="images/5-text/tspan-offset.svg" alt="5-text/tspan-offset.svg" />
+  </a>
+</div>
+
+<p><code class="highlighter-rouge">&lt;tspan&gt;</code> elements can be positioned normally with <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">y</code>, but can also be positioned relative to the preceding text using the <code class="highlighter-rouge">dx</code> and <code class="highlighter-rouge">dy</code> attributes.
+Note that using these attributes offsets all of the following text as well as the element it is applied to.
+You can think of it as moving a typing cursor; once you move it, the next text that comes in will start at that position.</p>
+
+<p>The <code class="highlighter-rouge">baseline-shift</code> attribute can be used to quickly create a superscript or subscript without affecting the text after it.</p>
+
+<p><code class="highlighter-rouge">em</code> can be used as a font size unit to specify a size relative to the current font size.
+For example, you may want to set <code class="highlighter-rouge">font-size="0.75em"</code> on a superscript element to make it 75% the size of the normal text.</p>
+
+<p>Unfortunately, there is no reliable way to auto-wrap text in SVG.
+You will have to manually break text at the desired places and position lines beneath one another.</p>
+
+<h4 id="whitespace">Whitespace</h4>
+
+<p>As mentioned before, SVG (and most of the related web standards) are whitespace-insensitive.
+Multiple consecutive whitespace characters are collapsed down to one.
+This can unfortunately cause some tricky problems with text, because the way you format your code sometimes matters.</p>
+
+<div class="language-xml col highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grumpy<span class="nt">&lt;tspan&gt;</span>cat<span class="nt">&lt;/tspan&gt;</span>
+
+grumpy
+<span class="nt">&lt;tspan&gt;</span>
+  cat
+<span class="nt">&lt;/tspan&gt;</span>
+</code></pre></div></div>
+
+<div class="col">
+  <a href="images/5-text/text-whitespace.svg" target="_blank">
+    <img src="images/5-text/text-whitespace.svg" alt="5-text/text-whitespace.svg" />
+  </a>
+</div>
+
+<p>Keep this quirk in mind when writing text in SVG.
+If you are having alignment/spacing problems, check your whitespace.</p>
+
+<p>If you explicitly need multiple consecutive whitespace characters in your text, you can force them with Unicode characters (eg <code class="highlighter-rouge">&amp;#160</code> for a single space).</p>
+
+<h4 class="break_before" id="--exercise-3"><i class="fas fa-lg fa-flag-checkered"></i>  EXERCISE 3</h4>
+
+<figure>
+  <a href="images/exercises/exercise-3.svg" target="_blank">
+    <img src="images/exercises/exercise-3.svg" alt="exercises/exercise-3.svg" class="large_img" />
+  </a>
+  <figcaption></figcaption>
+</figure>
+
+<p>Recreate this SVG using the techniques covered so far.
+The exact colors, lengths, and dimensions are not important; just try to capture the basic picture.</p>
+:ET

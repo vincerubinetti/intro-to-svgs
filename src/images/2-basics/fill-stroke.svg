@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 8px;
+    }
+  </style>
+  <polygon
+    fill="#81d4fa"
+    stroke="#03a9f4"
+    stroke-width="2"
+    points="
+      85.000 50.000
+      60.816 16.713
+      21.684 29.428
+      21.684 70.572
+      60.816 83.287
+    "
+  />
+  <text x="50" y="50" text-anchor="middle" dominant-baseline="middle">
+    fill
+  </text>
+  <text
+    x="30"
+    y="30"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    transform="rotate(-18)"
+  >
+    stroke
+  </text>
+</svg>

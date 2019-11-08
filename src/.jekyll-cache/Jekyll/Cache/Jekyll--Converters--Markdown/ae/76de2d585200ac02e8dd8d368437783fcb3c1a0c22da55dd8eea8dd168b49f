@@ -1,0 +1,97 @@
+I"w<h3 id="background">Background</h3>
+
+<h4 id="raster-vs-vector">Raster vs vector</h4>
+
+<p>What is a vector image, and how does it differ from a regular image?</p>
+
+<p>In short: A raster image is made up of a grid of pixels, whereas a vector image is made up of shape definitions. Essentially, it is a set of instructions on what to draw, rather than a long list of pixels.</p>
+
+<figure>
+  <a href="images/1-background/raster-explained.svg" target="_blank">
+    <img src="images/1-background/raster-explained.svg" alt="Raster image" class="" />
+  </a>
+  <figcaption>Raster image</figcaption>
+</figure>
+
+<figure>
+  <a href="images/1-background/vector-explained.svg" target="_blank">
+    <img src="images/1-background/vector-explained.svg" alt="Vector image" class="" />
+  </a>
+  <figcaption>Vector image</figcaption>
+</figure>
+
+<h4 id="benefits-of-vector-graphics">Benefits of vector graphics</h4>
+
+<p>A vector graphic can be scaled to any size with perfect clarity and definition.
+Internally, when a program displays a vector graphic, it calculates the shapes and “renders” them to a grid of pixels with the same resolution as your monitor.
+This way you always get a smooth, crisp result.</p>
+
+<p>A raster graphic can be scaled to any size too, but requires some sort of algorithm to interpolate what should go in between the original pixels, which usually produces poor, blurry results.</p>
+
+<figure>
+  <a href="images/1-background/raster-enlarged.png" target="_blank">
+    <img src="images/1-background/raster-enlarged.png" alt="Raster image, enlarged" class="" />
+  </a>
+  <figcaption>Raster image, enlarged</figcaption>
+</figure>
+
+<figure>
+  <a href="images/1-background/vector-enlarged.png" target="_blank">
+    <img src="images/1-background/vector-enlarged.png" alt="Vector image, enlarged" class="" />
+  </a>
+  <figcaption>Vector image, enlarged</figcaption>
+</figure>
+
+<p>In addition, vector graphics usually have a smaller file size than raster graphics, because they are defined by a few lines of text that describe shapes, rather than many rows and columns of individual pixels.</p>
+
+<p><i class="fas fa-lg fa-question-circle"></i>What’s an example of vector graphics that almost everyone has used?<br />
+<i class="fas fa-lg fa-exclamation-circle"></i>Answer: <span class="spoiler">Fonts. Most fonts are vector based so text can be scaled to any size.</span></p>
+
+<h4 id="limitations-of-vector-graphics">Limitations of vector graphics</h4>
+
+<p>Because vector graphics are drawn with shapes, they are better suited to simpler, less detailed, more “geometric” images.
+More “photographic” images, such as realistic depictions of people, animals, etc, are usually better captured by raster images.</p>
+
+<figure>
+  <a href="images/1-background/vector-example-1.svg" target="_blank">
+    <img src="images/1-background/vector-example-1.svg" alt="Simple vector image" class="medium_img" />
+  </a>
+  <figcaption>Simple vector image</figcaption>
+</figure>
+
+<figure>
+  <a href="images/1-background/vector-example-2.svg" target="_blank">
+    <img src="images/1-background/vector-example-2.svg" alt="Complex vector image" class="medium_img" />
+  </a>
+  <figcaption>Complex vector image</figcaption>
+</figure>
+
+<figure>
+  <a href="images/1-background/raster-example.png" target="_blank">
+    <img src="images/1-background/raster-example.png" alt="Raster image" class="medium_img" />
+  </a>
+  <figcaption>Raster image</figcaption>
+</figure>
+
+<h4 id="what-is-svg">What is SVG</h4>
+
+<p><a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> is the most popular general-purpose vector graphic format.
+It was developed by the <a href="https://www.w3.org/">W3C</a>, the organization in charge of defining web standards like <a href="https://en.wikipedia.org/wiki/HTML">HTML</a> and <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>.</p>
+
+<figure>
+  <a href="images/1-background/svg-logo.svg" target="_blank">
+    <img src="images/1-background/svg-logo.svg" alt="SVG logo" class="" />
+  </a>
+  <figcaption>SVG logo</figcaption>
+</figure>
+
+<figure>
+  <a href="images/1-background/w3c-logo.svg" target="_blank">
+    <img src="images/1-background/w3c-logo.svg" alt="W3C logo" class="" />
+  </a>
+  <figcaption>W3C logo</figcaption>
+</figure>
+
+<p>SVG was originally aimed at the web, but it became so popular that you now see it in a lot of other contexts too, like Word documents, PDFs, graphs, illustrations, graphic design, printed media, etc.
+Keep this in mind when using SVGs outside of a browser: the context you’re using it in might not support all of the advanced features that a browser does, <em>because it has essentially co-opted the technology from another platform</em>.</p>
+:ET

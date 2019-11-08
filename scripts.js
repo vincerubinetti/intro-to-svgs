@@ -31,16 +31,19 @@ function makeJumpToToc() {
   jump.addEventListener('click', () => {
     if (!toc.getAttribute('open')) toc.setAttribute('open', '');
   });
+}
 
-  window.addEventListener('scroll', () => {
-    if (
-      window.scrollY >
-      toc.getBoundingClientRect().top -
-        document.body.getBoundingClientRect().top
-    )
-      jump.dataset.visible = 'true';
-    else jump.dataset.visible = 'false';
-  });
+// when user scrolls
+function onScroll() {
+  const toc = document.querySelector('.toc');
+  const jump = document.querySelector('.jump_to_toc');
+
+  if (
+    window.scrollY >
+    toc.getBoundingClientRect().top - document.body.getBoundingClientRect().top
+  )
+    jump.dataset.visible = 'true';
+  else jump.dataset.visible = 'false';
 }
 
 // make section anchors on headings with ids
@@ -66,12 +69,13 @@ function onHashChange() {
   element.setAttribute('data-glow', 'true');
   window.setTimeout(() => element.removeAttribute('data-glow'), 2000);
 }
-window.addEventListener('load', onHashChange);
 window.addEventListener('hashchange', onHashChange);
 
 // run scripts when page loaded
 window.onload = function() {
   makeToc();
   makeJumpToToc();
+  onScroll();
   makeAnchors();
+  onHashChange();
 };
